@@ -5,7 +5,8 @@ import useFetch from "../hooks/useFetch";
 
 export default function Day() {
     const { day } = useParams();
-    const words = useFetch(`http://localhost:3001/words?day=${day}`);
+    // const words = useFetch(`http://localhost:3001/words?day=${day}`);
+    const words = useFetch(process.env.PUBLIC_URL + '/db/data.json');
 
     return (
         <>
